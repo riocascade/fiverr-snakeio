@@ -4436,6 +4436,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Exps.AnimationFrameCount,
 		C3.Plugins.Spritefont2.Acts.SetText,
 		C3.Plugins.System.Exps.int,
+		C3.Plugins.Text.Cnds.CompareInstanceVar,
+		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.System.Exps.choose,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
 		C3.Plugins.Sprite.Acts.SetInstanceVar,
@@ -4508,6 +4510,7 @@ self.C3_JsPropNameTable = [
 	{btn_3: 0},
 	{btn_4: 0},
 	{cirlce_dot: 0},
+	{for: 0},
 	{multi_text: 0},
 	{skinArr: 0},
 	{Bullet: 0},
@@ -4634,6 +4637,7 @@ self.C3_JsPropNameTable = [
 	{borders: 0},
 	{buttons: 0},
 	{score: 0},
+	{killCount: 0},
 	{record: 0},
 	{admob: 0},
 	{game_mana: 0},
@@ -4858,6 +4862,8 @@ self.C3_ExpressionFuncs = [
 			const v1 = p._GetNode(1).GetVar();
 			return () => and(f0(v1.GetValue()), "%");
 		},
+		() => "player_score",
+		() => "kill",
 		() => "Colorful Bots",
 		() => "BOT1 Yellow",
 		() => 0.05,
